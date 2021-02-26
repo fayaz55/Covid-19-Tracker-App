@@ -1,0 +1,75 @@
+.centered {
+    height: 20vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heading-main{
+    color:#fff;
+    padding: 10px;
+    font-size: 70px;
+    font-weight:700px;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+    
+  }
+  
+  .heading-second{
+    color:#fff;
+    padding: 10px;
+    font-size: 50px;
+    font-weight:500px;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+  }
+  .btn-main {
+    padding: 40px 25px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 20px;
+    border-color: #b3b3ff;
+    border-width: thin;
+    width: 250px !important;
+    margin: 100px 30px;
+    text-align: center;
+    
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
+  }
+  
+  .cases {
+    color:#0d001a;
+    background-color:    #fff0b3;
+    opacity:0.8;
+  }
+  
+  .deaths {
+    color: #0d001a ;
+    background-color: #ff9999;
+    opacity:0.8;
+  }
+  .recover {
+    color: #0d001a;
+    background-color:  #ccffeb ;
+    opacity:0.8;
+  }
+  
+  .menu-bar{
+    background-image: linear-gradient(-90deg,#3A73EE, #a83279);
+  }
+  
+  .map{
+    
+    height: 800px;
+    width: 100vh;
+    overflow: hidden;
+    margin: 0px 0 0 0px;
+    position: relative;
+    
+    
+  }
+
+  .NavPane {
+    background-color:#0a0a0f;
+  }

@@ -1,10 +1,22 @@
-# Getting Started with Create React App
+# Covid-19 Tracking Application 
+
+This is a Covid-19 tracking application made with React. This shows data from Covid-19 across Canada including daily cases, vaccinations and testing numbers. Data is retrieved from https://opencovid.ca/api/ 
+
+Application is still in progress.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Modules
 
-In the project directory, you can run:
+This app uses Bootstrap and Datamaps.
+Simply run the following commands to install the the two 
+
+```bash
+npm install -i bootstrap
+npm install -i datamaps
+```
 
 ### `npm start`
 
