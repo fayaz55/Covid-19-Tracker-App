@@ -1,13 +1,11 @@
 
-import React, { Component, useEffect, useState} from 'react';
+import React, { Component} from 'react';
 import Card from '../../Components/casesCard';
 import VaccineCard from '../../Components/vaccineCard';
-import Graph from '../../Components/Graph/Graph';
 import GraphContainer from '../../Components/Graph/GraphContainer';
 import ChoroplethMap from '../../Components/Map/ChoroplethMap';
 import './MainPage.css'
 import VaccineGraphContainer from '../../Components/Graph/VaccineGraphContainer';
-
 
 let today = new Date();
 let date=today.getDate() + "-"+ parseInt(today.getMonth()+1) +"-"+today.getFullYear();
@@ -35,6 +33,7 @@ class MainPage extends Component {
         <div className="App"> 
           
           <h1 className="heading-main"> Covid-19 Tracker</h1>
+          
           <Card prov={'canada'}/>
           <div className="d-flex justify-content-center">
             <h4 className="note">*Last Updated: {date}</h4>

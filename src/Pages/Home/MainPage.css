@@ -7,7 +7,7 @@
   
   .heading-main{
     color:#fff;
-    padding: 10px;
+    padding: 20px;
     font-size: 70px;
     font-weight:700px;
     text-align: center;
@@ -59,7 +59,7 @@
   }
   .cases {
     color:#0d001a;
-    background-color:    #fff0b3;
+    background-color: #fff0b3;
     opacity:0.8;
   }
   
@@ -105,3 +105,5 @@
     text-align: center;
     color:darkgrey
   }
+
+  

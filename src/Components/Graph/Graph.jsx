@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Line, Scatter} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 class Graph extends Component {
     constructor(props){
         super(props)
@@ -74,7 +74,7 @@ class Graph extends Component {
     render() {
         return (  
             <div className="chart">
-                <Line ref={ref => this.chartRefernece = ref} data= {this.state} height={700} width={1200} />
+                <Line ref={ref => this.chartRefernece = ref} data= {this.state} height={700} width={1100} />
             </div>
         );
     }

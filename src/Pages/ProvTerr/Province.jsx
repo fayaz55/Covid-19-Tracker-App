@@ -37,6 +37,7 @@ class Province extends Component {
                 <div className="d-flex justify-content-center">
                     <h4 className="note">*Last Updated: {date}</h4>
                 </div>
+
                 <h2 className="heading-second"> Trends Over Time</h2>
                 <div className="d-flex justify-content-center">
                     <h4 className="note-bar">Click on the legend labels to show/hide dataset</h4>
@@ -44,8 +45,10 @@ class Province extends Component {
                 <div className="d-flex justify-content-center graph">
                     <GraphContainer prov={codes[id]}/>
                 </div>
+                
                 <h2 className="heading-second"> Vaccine Progress</h2>
                 <VaccineCard prov={codes[id]}/>
+                
                 <h2 className="heading-second"> Vaccine Distribution</h2>
                 <div className="d-flex justify-content-center">
                     <h4 className="note-bar">Click on the legend labels to show/hide dataset</h4>
