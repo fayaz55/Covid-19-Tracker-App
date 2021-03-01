@@ -1,109 +1,126 @@
 .centered {
-    height: 20vh; /* Magic here */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .heading-main{
-    color:#fff;
-    padding: 20px;
-    font-size: 70px;
-    font-weight:700px;
-    text-align: center;
-    text-shadow: 3px 3px rgba(50,50,70,0.5);
-    
-  }
-  
-  .heading-second{
-    color:#fff;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    font-size: 50px;
-    font-weight:500px;
-    text-align: center;
-    text-shadow: 3px 3px rgba(50,50,70,0.5);
-  }
+  height: 20vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .heading-third{
-    color:#fff;
-    padding-top: 100px;
-    padding-bottom: 0px;
-    font-size: 50px;
-    font-weight:500px;
-    text-align: center;
-    text-shadow: 3px 3px rgba(50,50,70,0.5);
-  }
-  .btn-main {
-    padding: 40px 25px;
-    display: inline-block;
-    font-size: 30px;
-    font-weight: 700;
-    border-radius: 20px;
-    border-color: #b3b3ff;
-    border-width: thin;
-    width: 250px !important;
-    margin: 100px 30px;
-    text-align: center;
-    
-    box-shadow: 3px 6px rgba(0,0,0,0.2);
-  }
+.heading-main{
+  color:#fff;
+  padding: 50px;
+  font-size: 80px;
+  font-weight:1000px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50,50,70,0.5);
   
-  .note{
-    margin-top: -75px;
-    display: inline-block;
-    font-size: small;
-    font-style: italic;
-    text-align: center;
-    color:darkgrey
-  }
-  .cases {
-    color:#0d001a;
-    background-color: #fff0b3;
-    opacity:0.8;
-  }
-  
-  .deaths {
-    color: #0d001a ;
-    background-color: #ff9999;
-    opacity:0.8;
-  }
-  .recover {
-    color: #0d001a;
-    background-color:  #ccffeb ;
-    opacity:0.8;
-  }
-  
-  .menu-bar{
-    background-image: linear-gradient(-90deg,#3A73EE, #a83279);
-  }
-  
-  .map{
-    padding-top: 25px;
-    height: 600px;
-    width: 100vh;
-    overflow: hidden;
-    margin: 0px 0px 0px 0px;
-    position: relative;
-    
-  }
+}
 
-  .NavPane {
-    background-color:#0a0a0f;
-  }
+.heading-second{
+  color:#fff;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 50px;
+  font-weight:500px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
 
-  .graph{
-    padding-top: 50px;
-  }
-
-  .note-bar{
-    margin-bottom: -50px;
-    display: inline-flex;
-    align-self: center;
-    font-size: small;
-    font-style: italic;
-    text-align: center;
-    color:darkgrey
-  }
-
+.heading-third{
+  color:#fff;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 50px;
+  font-weight:500px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+.btn-main {
+  padding: 40px 25px;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 20px;
+  border-color: #b3b3ff;
+  border-width: thin;
+  width: 250px !important;
+  margin: 100px 30px;
+  text-align: center;
   
+  box-shadow: 3px 6px rgba(0,0,0,0.2);
+}
+
+.note{
+  margin-top: -75px;
+  display: inline-block;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  color:darkgrey
+}
+.cases {
+  color:#0d001a;
+  background-color: #fff0b3;
+  opacity:0.8;
+}
+
+.deaths {
+  color: #0d001a ;
+  background-color: #ff9999;
+  opacity:0.8;
+}
+.recover {
+  color: #0d001a;
+  background-color:  #ccffeb ;
+  opacity:0.8;
+}
+
+.testing {
+  color: #0d001a;
+  background-color:  #99ddff ;
+  opacity:0.8;
+}
+
+.menu-bar{
+  background-image: linear-gradient(-90deg,#3A73EE, #a83279);
+}
+
+.map{
+  padding-top: 25px;
+  height: 800px;
+  width: 140vh;
+  overflow: hidden;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  
+}
+
+.NavPane {
+  background-color:#0a0a0f;
+}
+
+.graph{
+  padding-top: 50px;
+}
+
+.note-bar{
+  margin-bottom: -50px;
+  display: inline-flex;
+  align-self: center;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  color:darkgrey
+}
+
+.note-map{
+  margin-top: -175px;
+  display: inline-block;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  color:darkgrey
+}
+
+.vaccineCard{
+  margin-bottom: -50px;
+}

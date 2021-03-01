@@ -32,9 +32,9 @@ class MainPage extends Component {
       return (
         <div className="App"> 
           
-          <h1 className="heading-main"> Covid-19 Tracker</h1>
+          <h1 className="heading-main"> Covid-19 Tracker Canada</h1>
           
-          <Card prov={'canada'}/>
+          <Card prov={'canada'} />
           <div className="d-flex justify-content-center">
             <h4 className="note">*Last Updated: {date}</h4>
           </div>
@@ -44,7 +44,7 @@ class MainPage extends Component {
             <ChoroplethMap data={this.mapdata(this.state.array)}/>
           </div>
           <div className="d-flex justify-content-center">
-            <h4 className="note">Click on Province/Territory for more info</h4>
+            <h4 className="note-map">Click on Province/Territory for more info</h4>
           </div>
 
           <h2 className="heading-second"> Trends Over Time</h2>
@@ -56,7 +56,7 @@ class MainPage extends Component {
           </div>
           
           
-          <h2 className="heading-second"> Vaccine Progress</h2>
+          <h2 className="heading-second vaccineCard"> Vaccine Progress</h2>
           <VaccineCard prov={'canada'}/>
           <h2 className="heading-second"> Vaccine Distribution</h2>
           <div className="d-flex justify-content-center">

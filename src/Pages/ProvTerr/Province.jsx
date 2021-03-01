@@ -46,7 +46,7 @@ class Province extends Component {
                     <GraphContainer prov={codes[id]}/>
                 </div>
                 
-                <h2 className="heading-second"> Vaccine Progress</h2>
+                <h2 className="heading-second vaccineCard"> Vaccine Progress</h2>
                 <VaccineCard prov={codes[id]}/>
                 
                 <h2 className="heading-second"> Vaccine Distribution</h2>
