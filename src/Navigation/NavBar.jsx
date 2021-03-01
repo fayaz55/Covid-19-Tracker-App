@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Link } from 'react-router-dom';
+
+
 const NavBar = () => {
     
     return (
@@ -9,7 +11,7 @@ const NavBar = () => {
             </Link>
             
             <form className="form-inline">
-                <input className="form-control mr-sm-2 dark" type="search" placeholder="Enter Province/Territory" aria-label="Search"/>
+                <input className="form-control mr-sm-2 dark" type="search" placeholder="Enter Province/Territory " aria-label="Search"/>
                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </nav>

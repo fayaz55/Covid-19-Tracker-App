@@ -4,7 +4,9 @@ let today = new Date();
 let date=today.getDate() + "-"+ parseInt(today.getMonth()+1) +"-"+today.getFullYear();
 
 
-class casesCard extends Component {
+
+
+class VaccineCard extends Component {
     
     state={};
     
@@ -21,13 +23,13 @@ class casesCard extends Component {
      
     render() { 
 
-        const {active_cases, active_cases_change,cumulative_deaths,deaths,cumulative_recovered,recovered} = this.state;
+        const {cumulative_dvaccine, dvaccine, cumulative_avaccine,avaccine,cumulative_cvaccine,cvaccine} = this.state;
 
         return ( 
             <div className="d-flex justify-content-center" >
-                <span className="btn-main cases "> Active Cases <br/> {this.numFormat(active_cases)} <br/> ({this.posVal()}{active_cases_change})</span>
-                <span className="btn-main deaths "> Deaths <br/> {this.numFormat(cumulative_deaths)} <br/> (+{deaths}) </span>
-                <span className="btn-main recover"> Recovered <br/> {this.numFormat(cumulative_recovered)} <br/> (+{recovered})</span>
+                <span className="btn-main cases "> Distributed <br/> {this.numFormat(cumulative_dvaccine)} <br/> (+{this.numFormat(dvaccine)})</span>
+                <span className="btn-main deaths "> Administered <br/> {this.numFormat(cumulative_avaccine)} <br/> (+{this.numFormat(avaccine)}) </span>
+                <span className="btn-main recover"> Completed <br/> {this.numFormat(cumulative_cvaccine)} <br/> (+{this.numFormat(cvaccine)})</span>
             </div>
         );
     }
@@ -41,4 +43,4 @@ class casesCard extends Component {
     }
 }
  
-export default casesCard;
+export default VaccineCard ;

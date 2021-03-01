@@ -51,7 +51,6 @@ class ChoroplethMap extends Component {
             };
         });
 
-        
     
         let map = new Datamap({
             element: document.getElementById('cloropleth_map'),
@@ -88,8 +87,8 @@ class ChoroplethMap extends Component {
             setProjection: function (element) {
                 var projection = d3.geo.mercator()
                     .center([-106.3468, 68.1304]) // always in [East Latitude, North Longitude]
-                    .scale(350)
-                    .translate([element.offsetWidth / 2.2, element.offsetHeight / 2]);
+                    .scale(500)
+                    .translate([element.offsetWidth / 2.2, element.offsetHeight / 10]); // Offset Height(crop from top)
 
                 var path = d3.geo.path().projection(projection);
                 return { path: path, projection: projection };

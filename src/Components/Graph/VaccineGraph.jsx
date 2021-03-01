@@ -9,8 +9,8 @@ class Graph extends Component {
         labels: this.props.labels,
         datasets: [
             {
-                label: "New Cases",
-                data: this.props.data.cases,
+                label: "Distributed",
+                data: this.props.data.distributed,
                 fill: true,
                 showLine: true,
                 backgroundColor: "rgba(255, 255, 179,0.2)",
@@ -19,16 +19,16 @@ class Graph extends Component {
             },
             
             {
-                label: "Deaths",
-                data: this.props.data.deaths,
+                label: "Administered",
+                data: this.props.data.administered,
                 fill: true,
                 backgroundColor: "rgba(255, 153, 194,0.2",
                 borderColor: "#ff99c2"
             },
 
             {
-                label: "Recovered",
-                data: this.props.data.recovered,
+                label: "Completed",
+                data: this.props.data.completed,
                 fill: true,
                 backgroundColor: "rgba(75,192,192,0.2)",
                 borderColor: "rgba(75,192,192,1)"
@@ -53,7 +53,7 @@ class Graph extends Component {
                         display:true,
                         fontColor: "white",
                         fontSize: 20,
-                        stepSize: 10,
+                        stepSize: 15,
                     }
                   }],
                 yAxes: [{
@@ -74,7 +74,7 @@ class Graph extends Component {
     render() {
         return (  
             <div className="chart">
-                <Line ref={ref => this.chartRefernece = ref} data= {this.state} height={700} width={1200} />
+                <Line ref={ref => this.chartRefernece = ref} data= {this.state} height={500} width={1000} />
             </div>
         );
     }

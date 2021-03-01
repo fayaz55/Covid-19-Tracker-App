@@ -1,10 +1,12 @@
 
 import React, { Component, useEffect, useState} from 'react';
 import Card from '../../Components/casesCard';
+import VaccineCard from '../../Components/vaccineCard';
 import Graph from '../../Components/Graph/Graph';
 import GraphContainer from '../../Components/Graph/GraphContainer';
 import ChoroplethMap from '../../Components/Map/ChoroplethMap';
 import './MainPage.css'
+import VaccineGraphContainer from '../../Components/Graph/VaccineGraphContainer';
 
 
 let today = new Date();
@@ -31,28 +33,52 @@ class MainPage extends Component {
     if (this.state.array.length>0){
       return (
         <div className="App"> 
+          
           <h1 className="heading-main"> Covid-19 Tracker</h1>
-          <Card />
+          <Card prov={'canada'}/>
+          <div className="d-flex justify-content-center">
+            <h4 className="note">*Last Updated: {date}</h4>
+          </div>
+          
           <h2 className="heading-second"> Number Across Canada</h2>
           <div className="d-flex justify-content-center">
             <ChoroplethMap data={this.mapdata(this.state.array)}/>
           </div>
-          <h2 className="heading-second"> New Cases Over Time</h2>
           <div className="d-flex justify-content-center">
-            <GraphContainer/>
+            <h4 className="note">Click on Province/Territory for more info</h4>
           </div>
+
+          <h2 className="heading-second"> Trends Over Time</h2>
+          <div className="d-flex justify-content-center">
+            <h4 className="note-bar">Click on the legend labels to show/hide dataset</h4>
+          </div>
+          <div className="d-flex justify-content-center graph">
+            <GraphContainer prov={'canada'}/>
+          </div>
+          
+          
+          <h2 className="heading-second"> Vaccine Progress</h2>
+          <VaccineCard prov={'canada'}/>
+          <h2 className="heading-second"> Vaccine Distribution</h2>
+          <div className="d-flex justify-content-center">
+            <h4 className="note-bar">Click on the legend labels to show/hide dataset</h4>
+          </div>
+          <div className="d-flex justify-content-center graph">
+            <VaccineGraphContainer prov={'canada'}/>
+          </div>
+
         </div>
       );
     }
 
-    return (
+    return null;
+    /*(
       <div className="App"> 
         <h1 className="heading-main"> Covid-19 Tracker</h1>
         <Card prov={'canada'} />
         <h2 className="heading-second"> Number Across Canada</h2>
       </div>
-    );
-    
+    )*/
   }
   
   mapdata(value){

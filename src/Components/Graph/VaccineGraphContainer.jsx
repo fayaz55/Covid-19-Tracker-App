@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Graph from './Graph';
+import VaccineGraph from './VaccineGraph';
 import moment from 'moment';
 
 let today = new Date();
 let date=today.getDate() + "-"+ parseInt(today.getMonth()+1) +"-"+today.getFullYear();
 
 
-class GraphContainer extends Component {
+class VaccineGraphContainer extends Component {
     state = { 
-        cases:[],
-        deaths:[],
-        recovered:[],
+        distributed:[],
+        administered:[],
+        completed:[],
     }
 
     
@@ -21,9 +21,9 @@ class GraphContainer extends Component {
         //console.log(data.cases);
         
         Promise.all([
-            await fetch('https://api.opencovid.ca/timeseries?stat=cases&loc='+  this.props.prov +'&after=01-03-2020&before=${date}'),
-            await fetch('https://api.opencovid.ca/timeseries?stat=mortality&loc='+ this.props.prov +'&after=01-03-2020&before=${date}'),
-            await fetch ('https://api.opencovid.ca/timeseries?stat=recovered&loc='+ this.props.prov +'&after=01-03-2020&before=${date}')
+            await fetch('https://api.opencovid.ca/timeseries?stat=dvaccine&loc='+ this.props.prov +'&after=01-12-2020&before=${date}'),
+            await fetch('https://api.opencovid.ca/timeseries?stat=avaccine&loc='+ this.props.prov +'&after=01-12-2020&before=${date}'),
+            await fetch('https://api.opencovid.ca/timeseries?stat=cvaccine&loc='+ this.props.prov +'&after=01-12-2020&before=${date}')
         ]).then(function (responses) {
             // Get a JSON object from each of the responses
             return Promise.all(responses.map(function (response) {
@@ -31,11 +31,8 @@ class GraphContainer extends Component {
             }));
         }).then(data => {
             // Log the data to the console
-            // You would do something with both sets of data here
             console.log(data);
-            this.setState({cases: data[0].cases, deaths: data[1].mortality, recovered: data[2].recovered});
-            
-            //this.setState({deaths: data.mortality})
+            this.setState({distributed: data[0].dvaccine, administered: data[1].avaccine, completed: data[2].cvaccine});
             
         }).catch(function (error) {
             // if there's an error, log it
@@ -44,13 +41,14 @@ class GraphContainer extends Component {
       }
 
     render() {
+
         var datasets = {
-            cases: this.mapDataPoints(this.state.cases), 
-            deaths: this.mapDataPointsDeaths(this.state.deaths),
-            recovered: this.mapDataPointsRecovered(this.state.recovered)
+            distributed: this.mapDataPoints(this.state.distributed), 
+            administered: this.mapDataPointsAvaccine(this.state.administered),
+            completed: this.mapDataPointsCvaccine(this.state.completed)
         }
-        if (this.state.cases.length>0)
-            return (<Graph data={datasets} labels={this.mapLabels(this.state.cases)}/>);
+        if (this.state.distributed.length>0)
+            return (<VaccineGraph data={datasets} labels={this.mapLabels(this.state.distributed)}/>);
         return null;
     }
 
@@ -59,8 +57,8 @@ class GraphContainer extends Component {
         if (value.length>0){
             var map = value.map(function(i){
                 return  {
-                        x: i.date_report,
-                        y: i.cases
+                        x: i.date_vaccine_distributed,
+                        y: i.dvaccine
                     };
             });
         }
@@ -68,12 +66,12 @@ class GraphContainer extends Component {
         return map;
     }
     
-    mapDataPointsDeaths(value){
+    mapDataPointsAvaccine(value){
         if (value.length>0){
             var map = value.map(function(i){
                 return  {
-                        x: i.date_death_report,
-                        y: i.deaths
+                        x: i.date_vaccine_administered,
+                        y: i.avaccine
                     };
             });
         }
@@ -81,12 +79,12 @@ class GraphContainer extends Component {
         return map;
     }
 
-    mapDataPointsRecovered(value){
+    mapDataPointsCvaccine(value){
         if (value.length>0){
             var map = value.map(function(i){
                 return  {
-                        x: i.date_recovered,
-                        y: i.recovered
+                        x: i.date_vaccine_completed,
+                        y: i.cvaccine
                     };
             });
         }
@@ -97,7 +95,7 @@ class GraphContainer extends Component {
     mapLabels(value){
         if (value.length>0){
             var map = value.map(function(i){
-                return i.date_report;
+                return i.date_vaccine_distributed;
             });
         }
         console.log(map);
@@ -105,4 +103,4 @@ class GraphContainer extends Component {
     }
 }
  
-export default GraphContainer;
+export default VaccineGraphContainer;

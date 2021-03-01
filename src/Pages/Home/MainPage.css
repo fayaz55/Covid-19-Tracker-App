@@ -17,7 +17,18 @@
   
   .heading-second{
     color:#fff;
-    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 50px;
+    font-weight:500px;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+  }
+
+  .heading-third{
+    color:#fff;
+    padding-top: 100px;
+    padding-bottom: 0px;
     font-size: 50px;
     font-weight:500px;
     text-align: center;
@@ -38,6 +49,14 @@
     box-shadow: 3px 6px rgba(0,0,0,0.2);
   }
   
+  .note{
+    margin-top: -75px;
+    display: inline-block;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    color:darkgrey
+  }
   .cases {
     color:#0d001a;
     background-color:    #fff0b3;
@@ -60,16 +79,29 @@
   }
   
   .map{
-    
-    height: 800px;
+    padding-top: 25px;
+    height: 600px;
     width: 100vh;
     overflow: hidden;
-    margin: 0px 0 0 0px;
+    margin: 0px 0px 0px 0px;
     position: relative;
-    
     
   }
 
   .NavPane {
     background-color:#0a0a0f;
+  }
+
+  .graph{
+    padding-top: 50px;
+  }
+
+  .note-bar{
+    margin-bottom: -50px;
+    display: inline-flex;
+    align-self: center;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    color:darkgrey
   }
