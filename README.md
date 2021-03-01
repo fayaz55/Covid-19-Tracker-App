@@ -2,7 +2,10 @@
 
 This is a Covid-19 tracking application made with React. This shows data from Covid-19 across Canada including daily cases, vaccinations and testing numbers. Data is retrieved from https://opencovid.ca/api/ 
 
-Application is still in progress.
+
+# Application 
+
+![](preview.png)
 
 ## Getting Started with Create React App
 
